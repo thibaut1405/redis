@@ -34,11 +34,13 @@ La partie suivante va permettre de démarrer un serveur Redis Local ainsi que no
 
 - **Lancer le server redis :**
 ```
-$ sudo service redis-server start
+redis-server 
 ```
 Si vous êtes sur une machine distante de votre serveur redis il faudra commenter la ligne :
 
 `bind 127.0.0.1 ::1`
+
+et mettre l'option `protected-mode no`
 
 ### Utilisation de l'application : 
 
