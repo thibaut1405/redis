@@ -57,18 +57,18 @@ Pour réaliser le commande `$ curl http://localhost/redis/note/{idnote}` :
     - Se rendre dans Postmaan
     - Dans la liste déroulante selectionner "GET"
     - Saisir dans la barre d'adresse `localhost/redis/note/{idnote}`
-    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/singleNote.PNG)
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/singleNote.png)
 - **Supprimer une  note via son id :**
 Pour réaliser le commande : `$ curl -X DELETE http://localhost/redis/notes/{id_note}` 
     - Se rendre dans Postmaan
     - Dans la liste déroulante selectionner "DELETE"
     - Saisir dans la barre d'adresse `localhost/redis/notes/{id_note}`
-    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/delete.PNG)
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/delete.png)
 - **Consulter toutes les notes disponibles :**
 Pour réaliser le commande : `$ curl  http://localhost/redis/notes` 
     - Se rendre dans Postmaan
     - Dans la liste déroulante selectionner "GET"
     - Saisir dans la barre d'adresse `localhost/redis/notes`
-    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/allNote.PNG)
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/allNote.png)
 
 Il ne vous reste plus qu'à tester notre application !
