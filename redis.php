@@ -16,10 +16,13 @@ $exist = $redis->exists('note');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($exist == 0) {
-        $redis->lpush("note", array($_GET['message']));
+        $client_data = file_get_contents("php://input");
+        $redis->lpush("note", array($client_data));
     } else {
-        $id = $redis->lpushx("note",$_GET['message']);
-        echo ("l'identifiant pour le mémo ".$_GET['message']." est : ".$id);
+        $client_data = file_get_contents("php://input");
+        $id = $redis->lpushx("note",$client_data);
+        echo ("l'identifiant pour le mémo ".$client_data." est : ".$id);
+
     }
 }
 
@@ -31,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' and empty($_GET['id'])) {
     echo("</br>");
 
     for ($i = 0; $i < $taille; $i++) {
-
         echo $i . ")" . " ". $all[$i];
         echo("</br>");
 
@@ -39,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' and empty($_GET['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' and !empty($_GET['id'])) {
-
     $specificElement = $redis->lindex('note', $_GET['id']);
     echo("Voici votre mémo : " . $specificElement);
 }
