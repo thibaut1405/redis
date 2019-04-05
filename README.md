@@ -46,16 +46,29 @@ Plusieurs méthodes sont disponibles afin d'utiliser le serveur HTTP pour sauveg
 notamment avec l'utilisation de commandes `curl`ou via l'application bureau `Postman`.
 
 - **Créer une note :**
-    - **Curl :** `$ curl -H "Content-Type:text/plain" --data 'le_contenu_de_la_note" http://localhost/redis/notes`
-    - **Postman :** ![alt text](https://github.com/thibaut1405//images/creerNote.PNG)
+Pour réaliser le commande `curl -H "Content-Type:text/plain" --data 'Penser au pain' http://127.0.0.1/redis/notes` :
+    - Se rendre dans Postmaan
+    - Dans la liste déroulante selectionner "POST"
+    - Saisir dans la barre d'adresse `localhost/redis/notes`
+    - Cliquer sur `body` et selectionner `raw` puis ecrivez ce que vous souhaitez
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/createNote.png)
 - **Consulter une note via son id :**
-    - **Curl :** `$ curl http://localhost:8080/notes/{idnote}` 
-    - **Postman :** ![alt text](https://github.com/MarineLH/I4_no_sql_TP_3/blob/master/images/consulterNote.PNG)
+Pour réaliser le commande `$ curl http://localhost/redis/note/{idnote}` :
+    - Se rendre dans Postmaan
+    - Dans la liste déroulante selectionner "GET"
+    - Saisir dans la barre d'adresse `localhost/redis/note/{idnote}`
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/singleNote.PNG)
 - **Supprimer une  note via son id :**
-    - **Curl :** `$ curl -X DELETE http://localhost:8080/notes/{id_note}` 
-    - **Postman :** ![alt text](https://github.com/MarineLH/I4_no_sql_TP_3/blob/master/images/supprimerNote.PNG)
+Pour réaliser le commande : `$ curl -X DELETE http://localhost/redis/notes/{id_note}` 
+    - Se rendre dans Postmaan
+    - Dans la liste déroulante selectionner "DELETE"
+    - Saisir dans la barre d'adresse `localhost/redis/notes/{id_note}`
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/delete.PNG)
 - **Consulter toutes les notes disponibles :**
-    - **Curl :** `$ curl  http://localhost:8080/notes` 
-    - **Postman :** ![alt text](https://github.com/MarineLH/I4_no_sql_TP_3/blob/master/images/consulterToutesNotes.PNG)
+Pour réaliser le commande : `$ curl  http://localhost/redis/notes` 
+    - Se rendre dans Postmaan
+    - Dans la liste déroulante selectionner "GET"
+    - Saisir dans la barre d'adresse `localhost/redis/notes`
+    - **Postman :** ![alt text](https://github.com/thibaut1405/redis/blob/master/images/allNote.PNG)
 
 Il ne vous reste plus qu'à tester notre application !
