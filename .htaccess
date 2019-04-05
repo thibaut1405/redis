@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+
+        RewriteCond %{REQUEST_METHOD} POST
+        RewriteRule ^notes redis.php?%{QUERY_STRING} [NC,L]
+
+        RewriteCond %{REQUEST_METHOD} GET
+        RewriteRule ^notes redis.php
+
+        RewriteCond %{REQUEST_METHOD} DELETE
+        RewriteRule ^notes/([0-9]+) redis.php?id=$1
+
+        RewriteCond %{REQUEST_METHOD} GET
+        RewriteRule ^note/([0-9]+) redis.php?id=$1
+
+</IfModule>
